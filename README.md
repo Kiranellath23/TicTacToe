@@ -1,72 +1,59 @@
-# TicTacToe
+# TicTacToeFrontend
 
-Monorepo containing a .NET backend and an Angular frontend for a Tic-Tac-Toe application.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
-**Contents**
-- `TicTacToeBackend/` — .NET Web API backend and tests
-- `TicTacToeUI/` — Angular frontend application
+## Development server
 
-**Overview**
-- Backend: REST API exposing game and scoreboard endpoints (controllers: `GamesController`, `ScoreboardController`).
-- Frontend: Angular single-page app that calls the backend API.
-
-**Prerequisites**
-- .NET SDK (targeting `net10.0`) — install from https://dotnet.microsoft.com
-- Node.js (16+) and npm — needed for the Angular frontend
-- (Optional) Angular CLI: `npm install -g @angular/cli`
-
-**Backend — Build & Run**
-- Change to the backend project folder and build:
+To start a local development server, run:
 
 ```bash
-cd TicTacToeBackend/TicTacToeBackend
-dotnet build
+ng serve
 ```
 
-- Run the API locally:
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
-dotnet run
+ng generate component component-name
 ```
 
-- Run unit tests:
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
 ```bash
-cd ../..
-dotnet test TicTacToeBackend.Tests
+ng generate --help
 ```
 
-Notes:
-- Configuration files: `appsettings.json` and `appsettings.Development.json` are present under TicTacToeBackend/TicTacToeBackend.
-- Check `Properties/launchSettings.json` if you need the exact launch URL/port used by the project.
+## Building
 
-**Frontend — Build & Run**
-- Change to the frontend folder, install dependencies and start the dev server:
+To build the project run:
 
 ```bash
-cd TicTacToeUI/TicTacToeFrontend
-npm install
-npm start
-# or use the Angular CLI directly:
-ng serve --open
+ng build
 ```
 
-Notes:
-- The frontend expects the backend API to be reachable (check environment or proxy config in the frontend if needed).
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-**API / Endpoints**
-- The API surface is implemented in `TicTacToeBackend/Controllers` — look at `GamesController.cs` and `ScoreboardController.cs` for available routes and request/response DTOs (`DTOs/`).
+## Running unit tests
 
-**Development Tips**
-- If you change backend models or DTOs, rebuild and restart the backend before testing from the frontend.
-- Use browser devtools and the Angular dev server console to debug frontend requests.
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-**Project Structure (quick)**
-- `TicTacToeBackend/` — Web API project, Services, Models, DTOs, Controllers, Tests
-- `TicTacToeUI/TicTacToeFrontend/` — Angular app under `src/`
+```bash
+ng test
+```
 
-**Contributing**
-- Fork, branch from `main`, add tests for backend logic in `TicTacToeBackend.Tests`, and open a PR with description and testing notes.
+## Running end-to-end tests
 
-**License**
-- Add a license file to the repo if you wish to make this project public.
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
