@@ -1,0 +1,61 @@
+.move-history-container {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 280px;
+}
+
+.move-history-container h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.no-moves {
+  color: #9ca3af;
+  text-align: center;
+  padding: 16px;
+}
+
+.moves-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.moves-table thead {
+  background: #e5e7eb;
+}
+
+.moves-table th {
+  padding: 8px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+}
+
+.moves-table td {
+  padding: 8px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.player-badge {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+}
+
+.player-x .player-badge {
+  background: #2563eb;
+}
+
+.player-o .player-badge {
+  background: #dc2626;
+}

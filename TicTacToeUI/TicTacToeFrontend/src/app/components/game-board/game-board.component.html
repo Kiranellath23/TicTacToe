@@ -1,0 +1,21 @@
+<div class="game-board-container">
+  <div class="board">
+    <div *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8]"
+         [ngClass]="getCellClass(i)"
+         (click)="onCellClick(i)">
+      {{ getCellContent(i) }}
+    </div>
+  </div>
+
+  <div *ngIf="gameState" class="game-status">
+    <div *ngIf="gameState.status === gameStatusEnum.InProgress" class="status-message">
+      Current Player: <span class="player-indicator">{{ gameState.currentPlayer }}</span>
+    </div>
+    <div *ngIf="gameState.status === gameStatusEnum.Won" class="status-message winner">
+      🎉 Player <span class="player-indicator">{{ gameState.winner }}</span> Wins!
+    </div>
+    <div *ngIf="gameState.status === gameStatusEnum.Draw" class="status-message draw">
+      It's a Draw!
+    </div>
+  </div>
+</div>

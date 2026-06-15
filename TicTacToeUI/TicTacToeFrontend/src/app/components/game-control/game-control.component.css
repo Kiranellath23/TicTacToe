@@ -1,0 +1,90 @@
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.mode-selector h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.mode-buttons button {
+  flex: 1;
+  padding: 8px 16px;
+  border: 2px solid #d1d5db;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.mode-buttons button.active {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: white;
+}
+
+.mode-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-buttons button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.reset-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.reset-btn:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.undo-btn {
+  background: #f59e0b;
+  color: white;
+}
+
+.undo-btn:hover:not(:disabled) {
+  background: #d97706;
+}
+
+.reset-scoreboard-btn {
+  background: #8b5cf6;
+  color: white;
+}
+
+.reset-scoreboard-btn:hover:not(:disabled) {
+  background: #7c3aed;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

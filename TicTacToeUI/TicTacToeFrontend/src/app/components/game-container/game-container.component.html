@@ -1,0 +1,30 @@
+<div class="game-container">
+  <h1>Tic Tac Toe</h1>
+
+  <div *ngIf="errorMessage" class="error-message">
+    ⚠️ {{ errorMessage }}
+  </div>
+
+  <div class="main-layout">
+<app-scoreboard [scoreboard]="scoreboard"></app-scoreboard>
+    <div class="game-section">
+      <app-game-board [gameState]="gameState"
+                      (cellClicked)="onCellClick($event)"></app-game-board>
+    </div>
+
+    <div class="sidebar">
+      <app-game-controls [gameMode]="currentMode"
+             [gameStatus]="gameState?.status ?? GameStatus.InProgress"
+                         [moveHistoryLength]="gameState?.moveHistory?.length || 0"
+                         [isLoading]="isLoading"
+                         (modeSelected)="onModeSelected($event)"
+                         (resetGameClicked)="onResetGame()"
+                         (undoClicked)="onUndoMove()"
+                         (resetScoreboardClicked)="onResetScoreboard()"></app-game-controls>
+
+      <app-move-history [moves]="gameState?.moveHistory || []"></app-move-history>
+
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="controls-container">
+  <div class="mode-selector">
+    <h4>Game Mode</h4>
+    <div class="mode-buttons">
+      <button [class.active]="gameMode === GameMode.TwoPlayer"
+              (click)="selectMode(GameMode.TwoPlayer)"
+              [disabled]="isLoading">
+        Two Player
+      </button>
+      <button [class.active]="gameMode === GameMode.Computer"
+              (click)="selectMode(GameMode.Computer)"
+              [disabled]="isLoading">
+        Play Computer
+      </button>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <button class="reset-btn" (click)="onResetGame()" [disabled]="isLoading">
+      Reset Game
+    </button>
+    <button class="undo-btn"
+            (click)="onUndo()"
+            [disabled]="isUndoDisabled()">
+      Undo Last Move
+    </button>
+    <button class="reset-scoreboard-btn" (click)="onResetScoreboard()" [disabled]="isLoading">
+      Reset Scoreboard
+    </button>
+  </div>
+</div>

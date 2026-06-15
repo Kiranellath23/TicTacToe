@@ -1,0 +1,20 @@
+<div class="scoreboard-container" *ngIf="scoreboard">
+  <h3>Scoreboard</h3>
+  <div class="scores">
+    <div class="score-item x-score">
+      <div class="score-label">X Wins</div>
+      <div class="score-value">{{ scoreboard.xWins }}</div>
+    </div>
+    <div class="score-item o-score">
+      <div class="score-label">O Wins</div>
+      <div class="score-value">{{ scoreboard.oWins }}</div>
+    </div>
+    <div class="score-item draw-score">
+      <div class="score-label">Draws</div>
+      <div class="score-value">{{ scoreboard.draws }}</div>
+    </div>
+  </div>
+  <div class="total-games">
+    Total Games: {{ scoreboard.totalGames }}
+  </div>
+</div>

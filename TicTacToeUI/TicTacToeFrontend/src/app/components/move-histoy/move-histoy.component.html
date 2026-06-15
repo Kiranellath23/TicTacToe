@@ -1,0 +1,22 @@
+<div class="move-history-container">
+  <h3>Move History</h3>
+  <div *ngIf="moves.length === 0" class="no-moves">
+    No moves yet
+  </div>
+  <table *ngIf="moves.length > 0" class="moves-table">
+    <thead>
+      <tr>
+        <th>Move</th>
+        <th>Player</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let move of moves" [ngClass]="'player-' + move.player.toLowerCase()">
+        <td>{{ move.moveNumber }}</td>
+        <td><span class="player-badge">{{ move.player }}</span></td>
+        <td>{{ move.position }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

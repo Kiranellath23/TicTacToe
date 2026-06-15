@@ -1,0 +1,78 @@
+.game-board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 4px;
+  background: #333;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.cell.clickable {
+  cursor: pointer;
+}
+
+.cell.clickable:hover {
+  background: #f0f0f0;
+  transform: scale(0.98);
+}
+
+.cell.x-player {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.cell.o-player {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.cell.winning {
+  background: #fbbf24 !important;
+  box-shadow: inset 0 0 8px rgba(251, 191, 36, 0.6);
+}
+
+.game-status {
+  text-align: center;
+  min-height: 40px;
+}
+
+.status-message {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.status-message.winner {
+  color: #16a34a;
+}
+
+.status-message.draw {
+  color: #7c3aed;
+}
+
+.player-indicator {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 4px;
+}
